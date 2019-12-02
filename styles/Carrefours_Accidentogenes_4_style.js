@@ -8,15 +8,25 @@ var style_Carrefours_Accidentogenes_4 = function(feature, resolution){
     };
     var value = ""
     var labelText = "";
-    size = 0;
+    var clusteredFeatures = feature.get("features");
     var labelFont = "16.9px \'.SF NS Text\', sans-serif";
     var labelFill = "rgba(0, 0, 0, 1)";
-    var textAlign = "left";
-    var offsetX = 8;
-    var offsetY = 3;
-    var placement = 'point';
-    if ("" !== null) {
-        labelText = String("");
+    size = clusteredFeatures.length;
+    var textAlign = "center";
+    var offsetX = 0;
+    var offsetY = 0;
+    if (size == 1) {
+        textAlign = "left"
+        offsetX = 8
+        offsetY = 3
+        var feature = clusteredFeatures[0];
+        if ("" !== null) {
+            labelText = String("");
+        }
+        key = value + "_" + labelText
+    } else {
+        labelText = size.toString()
+        size = 2*(Math.log(size)/ Math.log(2))
     }
     var style = [ new ol.style.Style({
         image: new ol.style.RegularShape({radius: 6.0 + size, points: 5,

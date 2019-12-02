@@ -37,17 +37,17 @@ var lyr_Densitdesaccidents_0 = new ol.layer.Image({
                                 alwaysInRange: true,
                                 imageExtent: [-183895.320903, 1379300.986354, -159509.657924, 1394693.439670]
                             })
-                        });var format_Merge_voirie_def1_1 = new ol.format.GeoJSON();
-var features_Merge_voirie_def1_1 = format_Merge_voirie_def1_1.readFeatures(json_Merge_voirie_def1_1, 
+                        });var format_Routes_Accidentognes_1 = new ol.format.GeoJSON();
+var features_Routes_Accidentognes_1 = format_Routes_Accidentognes_1.readFeatures(json_Routes_Accidentognes_1, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_Merge_voirie_def1_1 = new ol.source.Vector({
+var jsonSource_Routes_Accidentognes_1 = new ol.source.Vector({
     attributions: [new ol.Attribution({html: '<a href=""></a>'})],
 });
-jsonSource_Merge_voirie_def1_1.addFeatures(features_Merge_voirie_def1_1);var lyr_Merge_voirie_def1_1 = new ol.layer.Vector({
+jsonSource_Routes_Accidentognes_1.addFeatures(features_Routes_Accidentognes_1);var lyr_Routes_Accidentognes_1 = new ol.layer.Vector({
                 declutter: true,
-                source:jsonSource_Merge_voirie_def1_1, 
-                style: style_Merge_voirie_def1_1,
-                title: '<img src="styles/legend/Merge_voirie_def1_1.png" /> Merge_voirie_def1'
+                source:jsonSource_Routes_Accidentognes_1, 
+                style: style_Routes_Accidentognes_1,
+                title: '<img src="styles/legend/Routes_Accidentognes_1.png" /> Routes_Accidentogènes'
             });var format_10_Accidents_et_Plus__2 = new ol.format.GeoJSON();
 var features_10_Accidents_et_Plus__2 = format_10_Accidents_et_Plus__2.readFeatures(json_10_Accidents_et_Plus__2, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
@@ -76,9 +76,12 @@ var features_Carrefours_Accidentogenes_4 = format_Carrefours_Accidentogenes_4.re
 var jsonSource_Carrefours_Accidentogenes_4 = new ol.source.Vector({
     attributions: [new ol.Attribution({html: '<a href=""></a>'})],
 });
-jsonSource_Carrefours_Accidentogenes_4.addFeatures(features_Carrefours_Accidentogenes_4);var lyr_Carrefours_Accidentogenes_4 = new ol.layer.Vector({
+jsonSource_Carrefours_Accidentogenes_4.addFeatures(features_Carrefours_Accidentogenes_4);cluster_Carrefours_Accidentogenes_4 = new ol.source.Cluster({
+  distance: 10,
+  source: jsonSource_Carrefours_Accidentogenes_4
+});var lyr_Carrefours_Accidentogenes_4 = new ol.layer.Vector({
                 declutter: true,
-                source:jsonSource_Carrefours_Accidentogenes_4, 
+                source:cluster_Carrefours_Accidentogenes_4, 
                 style: style_Carrefours_Accidentogenes_4,
                 title: '<img src="styles/legend/Carrefours_Accidentogenes_4.png" /> Carrefours_Accidentogenes'
             });var format_Siege_Association_5 = new ol.format.GeoJSON();
@@ -87,9 +90,12 @@ var features_Siege_Association_5 = format_Siege_Association_5.readFeatures(json_
 var jsonSource_Siege_Association_5 = new ol.source.Vector({
     attributions: [new ol.Attribution({html: '<a href=""></a>'})],
 });
-jsonSource_Siege_Association_5.addFeatures(features_Siege_Association_5);var lyr_Siege_Association_5 = new ol.layer.Vector({
+jsonSource_Siege_Association_5.addFeatures(features_Siege_Association_5);cluster_Siege_Association_5 = new ol.source.Cluster({
+  distance: 10,
+  source: jsonSource_Siege_Association_5
+});var lyr_Siege_Association_5 = new ol.layer.Vector({
                 declutter: true,
-                source:jsonSource_Siege_Association_5, 
+                source:cluster_Siege_Association_5, 
                 style: style_Siege_Association_5,
                 title: '<img src="styles/legend/Siege_Association_5.png" /> Siege_Association'
             });var format_VADS_6 = new ol.format.GeoJSON();
@@ -206,9 +212,9 @@ jsonSource_ABSER_13.addFeatures(features_ABSER_13);cluster_ABSER_13 = new ol.sou
                 title: '<img src="styles/legend/ABSER_13.png" /> ABSER'
             });
 
-lyr_Densitdesaccidents_0.setVisible(true);lyr_Merge_voirie_def1_1.setVisible(true);lyr_10_Accidents_et_Plus__2.setVisible(true);lyr_Moins_de_10_Accidents__3.setVisible(true);lyr_Carrefours_Accidentogenes_4.setVisible(true);lyr_Siege_Association_5.setVisible(true);lyr_VADS_6.setVisible(true);lyr_PN_7.setVisible(true);lyr_BJVSER_8.setVisible(true);lyr_ATUJB_9.setVisible(true);lyr_AJVSR_10.setVisible(true);lyr_AJUDBF_11.setVisible(true);lyr_AFOV_12.setVisible(true);lyr_ABSER_13.setVisible(true);
-var layersList = [baseLayer,lyr_Densitdesaccidents_0,lyr_Merge_voirie_def1_1,lyr_10_Accidents_et_Plus__2,lyr_Moins_de_10_Accidents__3,lyr_Carrefours_Accidentogenes_4,lyr_Siege_Association_5,lyr_VADS_6,lyr_PN_7,lyr_BJVSER_8,lyr_ATUJB_9,lyr_AJVSR_10,lyr_AJUDBF_11,lyr_AFOV_12,lyr_ABSER_13];
-lyr_Merge_voirie_def1_1.set('fieldAliases', {'Nb_acci': 'Nombre Accident', 'Nom_V': 'Nom', });
+lyr_Densitdesaccidents_0.setVisible(true);lyr_Routes_Accidentognes_1.setVisible(true);lyr_10_Accidents_et_Plus__2.setVisible(true);lyr_Moins_de_10_Accidents__3.setVisible(true);lyr_Carrefours_Accidentogenes_4.setVisible(true);lyr_Siege_Association_5.setVisible(true);lyr_VADS_6.setVisible(true);lyr_PN_7.setVisible(true);lyr_BJVSER_8.setVisible(true);lyr_ATUJB_9.setVisible(true);lyr_AJVSR_10.setVisible(true);lyr_AJUDBF_11.setVisible(true);lyr_AFOV_12.setVisible(true);lyr_ABSER_13.setVisible(true);
+var layersList = [baseLayer,lyr_Densitdesaccidents_0,lyr_Routes_Accidentognes_1,lyr_10_Accidents_et_Plus__2,lyr_Moins_de_10_Accidents__3,lyr_Carrefours_Accidentogenes_4,lyr_Siege_Association_5,lyr_VADS_6,lyr_PN_7,lyr_BJVSER_8,lyr_ATUJB_9,lyr_AJVSR_10,lyr_AJUDBF_11,lyr_AFOV_12,lyr_ABSER_13];
+lyr_Routes_Accidentognes_1.set('fieldAliases', {'Nb_acci': 'Nombre Accident', 'Nom_V': 'Nom', });
 lyr_10_Accidents_et_Plus__2.set('fieldAliases', {'zone_acci': 'Nom du lieu', 'nbasso': 'Nombre Association', 'nbVADS': 'Nombre VADS', 'nbacc': 'Nombre Accident', });
 lyr_Moins_de_10_Accidents__3.set('fieldAliases', {'zone_acci': 'Nom du lieu', 'nbasso': 'Nombre association', 'nbVADS': 'Nomnre VADS', 'nbacc': 'Nombre Accident', });
 lyr_Carrefours_Accidentogenes_4.set('fieldAliases', {'Nom_carre_': 'Nom carrefour', });
@@ -221,7 +227,7 @@ lyr_AJVSR_10.set('fieldAliases', {'Nom du lie': 'Nom du lieu', 'Nom de l��':
 lyr_AJUDBF_11.set('fieldAliases', {'Nom du lie': 'Nom du lieu', 'Nom de l��': 'Nom Acteur', 'Present': 'Presence observation?', });
 lyr_AFOV_12.set('fieldAliases', {'Nom du lie': 'Nom du lieu', 'Nom de l��': 'Nom Acteur', 'Present': 'Presence observation?', });
 lyr_ABSER_13.set('fieldAliases', {'Nom du lie': 'Nom du lieu', 'Nom de l��': 'Nom Acteur', 'Presence': 'Presence observation?', });
-lyr_Merge_voirie_def1_1.set('fieldImages', {'Nb_acci': 'TextEdit', 'Nom_V': 'TextEdit', });
+lyr_Routes_Accidentognes_1.set('fieldImages', {'Nb_acci': 'TextEdit', 'Nom_V': 'TextEdit', });
 lyr_10_Accidents_et_Plus__2.set('fieldImages', {'zone_acci': 'TextEdit', 'nbasso': 'TextEdit', 'nbVADS': 'TextEdit', 'nbacc': 'TextEdit', });
 lyr_Moins_de_10_Accidents__3.set('fieldImages', {'zone_acci': 'TextEdit', 'nbasso': 'TextEdit', 'nbVADS': 'TextEdit', 'nbacc': 'TextEdit', });
 lyr_Carrefours_Accidentogenes_4.set('fieldImages', {'Nom_carre_': 'TextEdit', });
@@ -234,7 +240,7 @@ lyr_AJVSR_10.set('fieldImages', {'Nom du lie': 'TextEdit', 'Nom de l��': 'Te
 lyr_AJUDBF_11.set('fieldImages', {'Nom du lie': 'TextEdit', 'Nom de l��': 'TextEdit', 'Present': 'TextEdit', });
 lyr_AFOV_12.set('fieldImages', {'Nom du lie': 'TextEdit', 'Nom de l��': 'TextEdit', 'Present': 'TextEdit', });
 lyr_ABSER_13.set('fieldImages', {'Nom du lie': 'TextEdit', 'Nom de l��': 'TextEdit', 'Presence': 'TextEdit', });
-lyr_Merge_voirie_def1_1.set('fieldLabels', {'Nb_acci': 'header label', 'Nom_V': 'header label', });
+lyr_Routes_Accidentognes_1.set('fieldLabels', {'Nb_acci': 'header label', 'Nom_V': 'header label', });
 lyr_10_Accidents_et_Plus__2.set('fieldLabels', {'zone_acci': 'header label', 'nbasso': 'header label', 'nbVADS': 'header label', 'nbacc': 'header label', });
 lyr_Moins_de_10_Accidents__3.set('fieldLabels', {'zone_acci': 'header label', 'nbasso': 'header label', 'nbVADS': 'header label', 'nbacc': 'header label', });
 lyr_Carrefours_Accidentogenes_4.set('fieldLabels', {'Nom_carre_': 'header label', });

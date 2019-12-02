@@ -664,14 +664,6 @@ var geolocateOverlay = new ol.layer.Vector({
 geolocation.setTracking(true);
 
 
-var geocoder = new Geocoder('nominatim', {
-  provider: 'osm',
-  lang: 'en-US',
-  placeholder: 'Search for ...',
-  limit: 5,
-  keepOpen: true
-});
-map.addControl(geocoder);
 
 var attribution = document.getElementsByClassName('ol-attribution')[0];
 var attributionList = attribution.getElementsByTagName('ul')[0];
